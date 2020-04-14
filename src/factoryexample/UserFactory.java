@@ -19,10 +19,14 @@ public class UserFactory {
     
     public User createUser(double rn){
         if (rn < 0.75){
-            return new Student();
+            Student stud = new Student();
+            System.out.printf("Студент %s %s из группы %s\n", stud.getSurname(), stud.getName(), stud.getGroupName());
+            return stud;
         } 
         else {
-            return new Teacher();
+            Teacher teach = new Teacher();
+            System.out.printf("Преподаватель %s %s %s с кафедры %d\n", teach.getSurname(), teach.getName(), teach.getPatronymic(), teach.getDivision());
+            return teach;
         }
     }
     

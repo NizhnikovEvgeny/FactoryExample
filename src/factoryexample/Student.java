@@ -13,12 +13,17 @@ import java.util.ArrayList;
  */
 public class Student extends User{
     public String GroupName;
+
+    public String getGroupName() {
+        return GroupName;
+    }
     
     private static ArrayList<String> GroupNameList;
     
     public Student(){
-        
-        this.setName(User.generateName());
+        int rn = User.numGenerate();
+        this.setName(User.generateName(rn));
+        this.setSurname(User.generateSurname(rn));
         this.setID(generateID());
         this.setGroupName(generateGroupName());
     }
@@ -28,7 +33,7 @@ public class Student extends User{
     }
     
     
-    @Override
+    
     public String getDivision() {
         return GroupName;
     }

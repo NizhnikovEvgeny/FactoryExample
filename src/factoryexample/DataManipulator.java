@@ -5,6 +5,7 @@
  */
 package factoryexample;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -21,19 +22,22 @@ public class DataManipulator {
     public DataManipulator() {
     }
     
-    public void initialize(){
+    public void initialize() throws IOException{
         User.generateNameList();
+        User.generateSurnameList();
+        User.generatePatronymicList();
+        Teacher.generateTeacherSurnameList();
         Student.generateGroupNameList();
     }
     
     public void generateData(){
-        /*
+        
         UserFactory UF = new UserFactory();
-        Users = UF.createUsers(20);
+        Users = UF.createUsers(50);
         
         JournalDataManipulator JDM = new JournalDataManipulator();
         Journals = JDM.createJournals();
-        */
+        
         
         BookDataManipulator BDM = new BookDataManipulator();
         BDM.createTestBook();

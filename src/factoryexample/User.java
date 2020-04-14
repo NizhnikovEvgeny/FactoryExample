@@ -5,6 +5,8 @@
  */
 package factoryexample;
 
+import static factoryexample.Teacher.TeacherSurnameList;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -16,11 +18,13 @@ public abstract class User {
     public int ID;
     public String Name;
     public String Surname;
-    public String Patronim;
+    public String Patronymic;
     
     public static int GLOBAL_ID = 0;
     
     public static ArrayList<String> NameList;
+    public static ArrayList<String> SurnameList;
+    public static ArrayList<String> PatronymicList;
 
     public void setID(int ID) {
         this.ID = ID;
@@ -34,8 +38,8 @@ public abstract class User {
         this.Surname = Surname;
     }
 
-    public void setPatronim(String Patronim) {
-        this.Patronim = Patronim;
+    public void setPatronymic(String Patronymic) {
+        this.Patronymic = Patronymic;
     }
 
     public int getID() {
@@ -50,30 +54,38 @@ public abstract class User {
         return Surname;
     }
 
-    public String getPatronim() {
-        return Patronim;
+    public String getPatronymic() {
+        return Patronymic;
     }
     
-    public abstract String getDivision();
     
-    public static void generateNameList(){
-        NameList = new ArrayList<String>();
-        NameList.add("Иван");
-        NameList.add("Денис");
-        NameList.add("Павел");
-        NameList.add("Олег");
+    public static void generateNameList() throws IOException{
+        NameList = ExcelExporter.exportNames();
+    }
+    public static void generateSurnameList() throws IOException{
+        SurnameList = ExcelExporter.exportSurnames();
+    }
+
+    public static void generatePatronymicList() throws IOException{
+        PatronymicList = ExcelExporter.exportPatronymics();
     }
     
-    public static String generateName(){
-        
-       double rn = Math.random()*NameList.size();
+    public static int numGenerate(){
+        int rn = (int) Math.floor(Math.random()*NameList.size());
+        return rn;
+    }
+    public static String generateName(int rn){
+  
+       return NameList.get(rn);
        
-       int rni = (int) Math.floor(rn);
-       if (rni==4){
-           rni = 3;
-       }
-       return NameList.get(rni);
-       
+    }
+    public static String generateSurname(int rn){
+        int ran = (int) Math.floor(Math.random()*SurnameList.size());
+        if (rn<NameList.indexOf("София")) {
+        return SurnameList.get(ran);
+        } else {
+        return SurnameList.get(ran)+"а";    
+        }
     }
     
     public static int generateID(){
