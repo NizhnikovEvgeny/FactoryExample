@@ -3,16 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/JournalDirector.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/User.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/PhysicJournalBuilder.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/DataManipulator.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/FactoryExample.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/AstronomicalJournalBuilder.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/JournalBuilder.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/Record.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/Journal.java</file>
-            <file>file:/D:/МИФИ/Теория%20и%20техника%20программирования/Lab3/FactoryExample/src/factoryexample/Book.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/BookFactory.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/Book.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/AstronomicalJournalBuilder.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/Fiction.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/RussianFiction.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/Bookable.java</file>
+            <file>file:/C:/Users/User/Documents/GitHub/FactoryExample/src/factoryexample/DataManipulator.java</file>
         </group>
     </open-files>
 </project-private>
