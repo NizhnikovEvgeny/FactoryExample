@@ -126,7 +126,7 @@ public class DataManipulator {
                 }    
                 i++;
             }
-            System.err.println("Генерация завершена");
+            System.out.println("ГЕНЕРАЦИЯ ЗАВЕРШЕНА");
         
         }
         
