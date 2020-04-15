@@ -5,6 +5,7 @@
  */
 package Books;
 
+import factoryexample.Frame;
 import java.util.ArrayList;
 
 /**
@@ -21,6 +22,7 @@ public class EnglishFiction implements Fiction{
         this.setAuhtor(generateAuthor());
         this.setName(generateName());
         this.setYear(generateYear());
+        Frame.text+= this.auhtor + " has written \"" + this.name + "\" in " + this.year + "\n";
         System.out.printf("%s has written \"%s\" in %d%n", this.auhtor, this.name, this.year);
     }
 

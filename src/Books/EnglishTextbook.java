@@ -5,6 +5,7 @@
  */
 package Books;
 
+import factoryexample.Frame;
 import java.util.ArrayList;
 
 /**
@@ -25,6 +26,7 @@ public class EnglishTextbook implements Textbook{
         this.setUniversity(generateUniversity());
         this.setAuthor(generateAuthor());
         this.setName(generateName());
+        Frame.text+= "English Textbook " + this.name + " for " + this.grade + " from " + this.university + " by " + this.author + "\n";
         System.out.printf("English Textbook %s for %s from %s by %s%n", this.name, this.grade, this.university, this.author);
     }
 

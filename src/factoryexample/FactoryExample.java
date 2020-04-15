@@ -17,6 +17,8 @@ public class FactoryExample {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        Frame frame = new Frame();
+        frame.setVisible(true);
         DataManipulator DM = new DataManipulator();
         DM.initialize();
         DM.generateData();

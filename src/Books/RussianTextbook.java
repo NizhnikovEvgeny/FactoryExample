@@ -5,6 +5,7 @@
  */
 package Books;
 
+import factoryexample.Frame;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +20,7 @@ public class RussianTextbook implements Textbook{
     public RussianTextbook() {
         this.setSubject(generateSubject());
         this.setType(generateType());
+        Frame.text+= "Русский учебник типа: " + this.type + " по предмету " + this.subject +"\n";
         System.out.printf("Русский учебник типа: %s по предмету %s%n", this.type,this.subject);
     }
 
