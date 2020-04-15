@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factoryexample;
+package Books;
 
 /**
  *
  * @author Dmitry
  */
-public class RussianFiction implements Fiction{
 
-    public RussianFiction() {
-        System.err.println("Создана Русская художественная литература");
-    }
+// Учебники
+public interface Textbook extends Bookable{
     
 }

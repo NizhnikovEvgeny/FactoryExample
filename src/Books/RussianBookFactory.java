@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factoryexample;
+package Books;
 
 /**
  *
  * @author Dmitry
  */
-public class EnglishBookFactory implements BookFactory{
+public class RussianBookFactory implements BookFactory{
 
     @Override
     public Textbook createTextbook() {
-        return new EnglishTextbook();
+        return new RussianTextbook();
     }
 
     @Override
     public Fiction createFiction() {
-        return new EnglishFiction();
+        return new RussianFiction();
     }
     
 }

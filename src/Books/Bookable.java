@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factoryexample;
+package Books;
 
 /**
  *
  * @author Dmitry
  */
-
-// Художественная литература
-public interface Fiction extends Bookable{
+public interface Bookable {
     
 }

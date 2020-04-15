@@ -5,6 +5,18 @@
  */
 package factoryexample;
 
+import Books.BookFactory;
+import Books.EnglishBookFactory;
+import Books.Bookable;
+import Books.EnglishTextbook;
+import Books.RussianBookFactory;
+import Books.RussianFiction;
+import Books.RussianTextbook;
+import Books.EnglishFiction;
+import users.Teacher;
+import users.Student;
+import users.User;
+import users.UserFactory;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -23,11 +35,24 @@ public class DataManipulator {
     }
     
     public void initialize() throws IOException{
+        //Users
         User.generateNameList();
         User.generateSurnameList();
         User.generatePatronymicList();
         Teacher.generateTeacherSurnameList();
         Student.generateGroupNameList();
+        //Books
+        EnglishTextbook.generateAuthorList();
+        EnglishTextbook.generateGradeList();
+        EnglishTextbook.generateNameList();
+        EnglishTextbook.generateUniversityList();
+        RussianTextbook.generateSubjectList();
+        RussianTextbook.generateTypeList();
+        RussianFiction.generateActionList();
+        RussianFiction.generatePlaceList();
+        RussianFiction.generateSubjectList();
+        EnglishFiction.generateAuthorList();
+        EnglishFiction.generateNameList();
     }
     
     public void generateData(){
