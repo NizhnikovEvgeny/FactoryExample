@@ -65,7 +65,7 @@ public class DataManipulator {
         
         
         BookDataManipulator BDM = new BookDataManipulator();
-        BDM.createTestBook();
+        Books = BDM.createTestBook();
     }
 
     private static class JournalDataManipulator {
@@ -112,7 +112,7 @@ public class DataManipulator {
             
         }
         
-        public void createTestBook(){
+        public ArrayList createTestBook(){
             BookFactory factory;
             ArrayList<Bookable> BookList = new ArrayList<Bookable>();
             int i = 0;
@@ -127,7 +127,7 @@ public class DataManipulator {
                 i++;
             }
             System.out.println("ГЕНЕРАЦИЯ ЗАВЕРШЕНА");
-        
+            return BookList;
         }
         
     }
