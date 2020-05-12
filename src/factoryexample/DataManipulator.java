@@ -5,9 +5,10 @@
  */
 package factoryexample;
 
+import org.apache.poi.hslf.record.Record;
 import Books.BookFactory;
+import Books.BookWithQuantity;
 import Books.EnglishBookFactory;
-import Books.Bookable;
 import Books.EnglishTextbook;
 import Books.RussianBookFactory;
 import Books.RussianFiction;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 public class DataManipulator {
     
     ArrayList<User> Users;
-    ArrayList<Bookable> Books;
+    ArrayList<BookWithQuantity> Books = new ArrayList<>();
     ArrayList<Record> Records;
     
     public DataManipulator() {
@@ -60,11 +61,14 @@ public class DataManipulator {
         Users = UF.createUsers(50);
         
         JournalDataManipulator JDM = new JournalDataManipulator();
-        Books = JDM.createJournals();
+  //      BookList = JDM.createJournals();
         
         
         BookDataManipulator BDM = new BookDataManipulator();
+  //      BookList.addAll(BDM.createTestBook());
+        
         Books.addAll(BDM.createTestBook());
+        Books.addAll(JDM.createJournals());
     }
 
     private static class JournalDataManipulator {
@@ -75,7 +79,7 @@ public class DataManipulator {
         }
         
          public ArrayList createJournals(){
-            ArrayList<Bookable> journals = new ArrayList<>();
+            ArrayList<BookWithQuantity> journals = new ArrayList<>();
             
             JournalDirector JDirector = new JournalDirector();
             JDirector.setJB(new PhysicJournalBuilder());
@@ -87,12 +91,12 @@ public class DataManipulator {
 
         }
          
-        private ArrayList<Journal> createThematicalJournals(JournalDirector JDirector) {
-            ArrayList<Journal> ThematicalJournals = new ArrayList<>(); 
+        private ArrayList<BookWithQuantity> createThematicalJournals(JournalDirector JDirector) {
+            ArrayList<BookWithQuantity> ThematicalJournals = new ArrayList<>(); 
             
             while(! JDirector.isJournalsIsOver() ){
                 JDirector.createJournal();
-                ThematicalJournals.add(JDirector.getJournal());
+                ThematicalJournals.add(new BookWithQuantity(JDirector.getJournal()));
             }
 
             return ThematicalJournals;
@@ -113,15 +117,15 @@ public class DataManipulator {
         
         public ArrayList createTestBook(){
             BookFactory factory;
-            ArrayList<Bookable> BookList = new ArrayList<Bookable>();
+            ArrayList<BookWithQuantity> BookList = new ArrayList<>();
             int i = 0;
             while(i < 100){
                 int R = i - (int)Math.floor(i/4)*4;
                 switch (R) {
-                    case 0: {factory = new RussianBookFactory(); BookList.add(factory.createFiction());} break;
-                    case 1: {factory = new RussianBookFactory(); BookList.add(factory.createTextbook());} break;
-                    case 2: {factory = new EnglishBookFactory(); BookList.add(factory.createFiction());} break;
-                    case 3: {factory = new EnglishBookFactory(); BookList.add(factory.createTextbook());} break;
+                    case 0: {factory = new RussianBookFactory(); BookList.add(new BookWithQuantity(factory.createFiction()));} break;
+                    case 1: {factory = new RussianBookFactory(); BookList.add(new BookWithQuantity(factory.createTextbook()));} break;
+                    case 2: {factory = new EnglishBookFactory(); BookList.add(new BookWithQuantity(factory.createFiction()));} break;
+                    case 3: {factory = new EnglishBookFactory(); BookList.add(new BookWithQuantity(factory.createTextbook()));} break;
                 }    
                 i++;
             }

@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Books;
+package Records;
+
+import users.User;
 
 /**
  *
  * @author Dmitry
  */
-class Book {
+class Record {
+    User user;
     
 }
