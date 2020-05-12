@@ -5,11 +5,13 @@
  */
 package factoryexample;
 
+import Books.Bookable;
+
 /**
  *
  * @author Dmitry
  */
-public class Journal {
+public class Journal implements Bookable{
     public String JName;
     public int volume;
     public int year;
