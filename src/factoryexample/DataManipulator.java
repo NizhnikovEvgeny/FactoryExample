@@ -61,14 +61,13 @@ public class DataManipulator {
         Users = UF.createUsers(50);
         
         JournalDataManipulator JDM = new JournalDataManipulator();
-  //      BookList = JDM.createJournals();
         
         
         BookDataManipulator BDM = new BookDataManipulator();
-  //      BookList.addAll(BDM.createTestBook());
         
         Books.addAll(BDM.createTestBook());
         Books.addAll(JDM.createJournals());
+        System.out.println("ГЕНЕРАЦИЯ ЗАВЕРШЕНА");
     }
 
     private static class JournalDataManipulator {
@@ -129,7 +128,6 @@ public class DataManipulator {
                 }    
                 i++;
             }
-            System.out.println("ГЕНЕРАЦИЯ ЗАВЕРШЕНА");
             return BookList;
         }
         
