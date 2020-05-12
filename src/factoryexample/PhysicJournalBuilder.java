@@ -12,7 +12,7 @@ package factoryexample;
 public class PhysicJournalBuilder extends JournalBuilder{
     
     
-    private final int YearBegin = 1964;
+    private final int YearBegin = 2000;
 
     public PhysicJournalBuilder() {
         YearCurrent = YearBegin;

@@ -22,6 +22,7 @@ public class FactoryExample {
         DataManipulator DM = new DataManipulator();
         DM.initialize();
         DM.generateData();
+        int a = 1;
     }
     
 }
